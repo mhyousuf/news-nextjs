@@ -15,9 +15,11 @@ export default function Header() {
                     <div className="grid flex-grow place-items-center md:w-4/12 m-6">
                         <div>
                             <figure>
-                                <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"
-                                    width={350}
-                                    height={450} />
+                                <img
+                                    src="https://st.depositphotos.com/1011646/1255/i/450/depositphotos_12553000-stock-photo-breaking-news-screen.jpg" alt="news!"
+                                    width={450}
+                                    height={450}
+                                />
                             </figure>
                         </div>
                     </div>

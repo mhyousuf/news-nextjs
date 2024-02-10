@@ -3,7 +3,7 @@ import DomesticCard from "@/components/Ui/domesticCrud";
 async function getData() {
 
     // let res = await fetch('https://api.thenewsapi.com/v1/news/top?api_token=aPWhRs6ZE0ZwJiVZkpQ0cRSL62RYWZiV4hxoVGeN&locale=us&categories=domestic&limit=3');
-    let res = await fetch('https://dev.to/api/articles?per_page=8');
+    let res = await fetch('https://newsdata.io/api/1/news?apikey=pub_37259a50dd3f00fec30ca5593f675634892aa&language=en&category=domestic&size=8');
 
     if (!res.ok) {
         throw new Error('Failed to fetch data')
@@ -12,7 +12,8 @@ async function getData() {
 }
 
 export default async function DomesticGrid() {
-    let domesticgrids = await getData();
+    let domesticRes = await getData();
+    let domestics = domesticRes.results;
     // console.log(domesticgrids);
 
     return (
@@ -29,13 +30,13 @@ export default async function DomesticGrid() {
                                 />
                             ))} */}
 
-                        {Array.isArray(domesticgrids) ? (
-                            domesticgrids.map((domestic, index) => (
+                        {Array.isArray(domestics) ? (
+                            domestics.map((domestic, index) => (
                                 <DomesticCard
                                     key={`domestic-${index}`}
-                                    cover_image={domestic.social_image}
+                                    image_url={domestic.image_url}
                                     title={domestic.title.slice(0, 20) + '....'}
-                                    published_at={domestic.published_at}
+                                    pubDate={domestic.pubDate}
                                 />
                             ))
                         ) : (

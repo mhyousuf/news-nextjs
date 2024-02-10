@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function DomesticCard(props) {
+export default function WorldCard(props) {
     return (
         <>
             <div className="card shadow-xl">
@@ -21,7 +21,7 @@ export default function DomesticCard(props) {
                         <span className="text-sm pl-2">{props.pubDate}</span>
                     </div>
                     <div className="ml-4 p-4">
-                        <Link href={`/category-details/domestic`} className="link link-info">Read More..</Link>
+                        <Link href={`/category-details/${props.id}`} className="link link-info">Read More..</Link>
                     </div>
                 </div>
             </div>
