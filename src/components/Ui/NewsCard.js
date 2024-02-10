@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function BusinessCard(props) {
+export default function NewsCard(props) {
     return (
         <>
             <div className="card shadow-xl">

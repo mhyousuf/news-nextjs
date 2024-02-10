@@ -1,4 +1,4 @@
-import BusinessCard from "@/components/Ui/businessCrud";
+import BusinessCard from "@/components/Ui/NewsCard";
 
 async function getData() {
 

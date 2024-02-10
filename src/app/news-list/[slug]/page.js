@@ -1,5 +1,5 @@
 import Layout from "@/components/Layout/layout";
-import BusinessCard from "@/components/Ui/businessCrud";
+import BusinessCard from "@/components/Ui/NewsCard";
 import Link from "next/link";
 
 async function getData(category) {
